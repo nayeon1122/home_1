@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>취업 정보 계정 만들기</title>
+  <style>
+    .red{
+      color: red;
+      font-size: 10px;
+    }
+    .blue_line{
+      font-weight: bold;
+      background-color: lightblue;
+      width: 800px;
+      padding-left: 10px;
+    }
+    .inside{
+      margin-left: 8px;
+      text-align: right;
+      width: 130px;
+      padding-right: 8px;
+      display: inline-block;
+    }
+    label{
+      margin: 5px;
+    }
+
+  </style>
+</head>
+<body>
+<h1>취업 정보 계정 만들기</h1>
+<p class="red">*필수 입력 항목</p>
+
+<form name="job_info" method="post">
+  <p class="blue_line">기본 정보</p>
+  <div id = "basic_info">
+    <label for = "u_name" class = "inside">이 름<span class = "red">*</span></label>
+    <input type = "text" id = "u_name" name = "u_name" size = "8"><br>
+
+    <label for = "email" class = "inside">이메일<span class = "red">*</span></label>
+    <input type = "email" id = "email" name = "email" size = "15" placeholder="id@domain_name"><br>
+
+    <label for = "pwd" class = "inside">암호<span class = "red">*</span></label>
+    <input type = "password" id = "pwd" name = "pwd" size = "12"><br>
+
+    <label for = "pwd_check" class = "inside">암호 확인<span class = "red">*</span></label>
+    <input type = "password" id = "pwd_check" name = "pwd_check" size = "13"><br>
+
+    <label for = "tel" class = "inside">모바일 폰<span class = "red">*</span></label>
+    <input type = "tel" id = "tel" name = "tel" size = "20" placeholder="010-0000-0000"><br>
+
+    <label for = "p_hompi" class = "inside">개인 홈페이지<span class = "red">*</span></label>
+    <input type = "url" id = "p_hompi" name = "p_hompi" size = "30" placeholder="http://"><br>
+
+    <label for = "addr" class = "inside">주소<span class = "red">*</span></label>
+    <input type = "text" id = "addr" name = "addr" size = "30"><br>
+  </div>
+
+  <div id = "school_info">
+    <p class="blue_line">학 력</p>
+    <label for = "school_name" class = "inside">학교 명<span class = "red">*</span></label>
+    <input type = "text" id = "school_name" name = "school_name"><br>
+
+     <label for = "major" class = "inside">전 공<span class = "red">*</span></label>
+    <input type = "text" id = "major" name = "major"><br>
+
+    <label for = "graduation_status" class = "inside">졸업 여부<span class = "red">*</span></label>
+      <select id = graduation_status name = "graduation_status">
+        <option values = "not_choose" selected>---선택---</option>
+        <option values = "graduation_soon">졸업예정</option>
+        <option values = "graduation">졸업</option>
+      </select><br>
+
+    <label for = "graduation_date" class = "inside">졸업(예정)일</label>
+    <input type = "date" id = "graduation_date" name = "graduation_date">
+  </div>
+
+  <div id = "work_info">
+    <p class="blue_line">업무 경력</p>
+    <label for = "company_name" class = "inside">근무업체명</label>
+    <input type = "text" id = "company_name" size = "20"><br>
+
+    <label for = "position" class = "inside">직위</label>
+    <input type = "text" id = "position" size = "10"><br>
+
+    <label for = "duty" class = "inside">담당 업무</label>
+    <textarea id = "duty" cols = "80" rows = "10" style = "margin-top: 7px;">이전 업체에서 담당한 업무를 기술하시오.</textarea><br>
+
+    <label for = "work_year" class = "inside">근무년수</label>
+    <input type = "number" id = "work_year" min = "0" max = "10" step = "0.5"><span>년</span>
+
+  </div>
+
+  <div id = "resume_file">
+        <p class="blue_line">자기소개서</p>
+        <label for = "resume" class = "inside">첨부파일</label>
+        <input type = "file" id = "resume" value = "파일 선택"> <br>
+    <p style = "margin-left: 200px"><input type = "submit" value = "제 출"> <input type = "reset" value = "재작성"></p>
+  </div>
+</form>
+
+</body>
+</html>
